@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+</head>
+<body>
+{{>layout/header}}
+<form id="buttons">
+	<button @click="goRegister">가입</button>
+	<button @click="goUserList">사용자 목록</button>
+</form>
+{{>layout/footer}}
+</body>
+
+<script>
+(function(){
+	new SOAF({
+		id: 'buttons',
+		handler: {
+			'goRegister': function (e) {
+				this.move(e, '/user/register');
+			},
+			'goUserList': function (e) {
+				this.move(e, '/user/list');
+			}
+		},
+		method: {
+			'move': function (e, url) {
+				e.preventDefault();
+				location.href = url;
+			}
+		}
+	})
+}())
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+</head>
+
+<body id="page-top">
+
+{{>layout/header}}
+
+  <div id="wrapper">
+
+	{{>layout/sidebar}}
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <!-- <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li> -->
+          <li class="breadcrumb-item active">{{title}}</li>
+        </ol>
+
+        <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            	{{subTitle}}
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>{{col1}}</th>
+                    <th>{{col2}}</th>
+                    <th>{{col3}}</th>
+                    <th>{{col4}}</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>{{col1}}</th>
+                    <th>{{col2}}</th>
+                    <th>{{col3}}</th>
+                    <th>{{col4}}</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>
+  </div>
+  
+ {{>layout/footer}}
+ 
+</body>
+</html>
